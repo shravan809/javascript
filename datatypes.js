@@ -92,4 +92,45 @@ document.writeln(gender, '<br>', typeof gender)
 output:
 true
 boolean */
+/* 
+
+1.Array
+
+emp = ['shravan', 26, 1051, 8099171145, 15000]
+
+document.writeln(typeof emp, '<br>', emp)
+ */
+// output:
+// object
+// shravan,26,1051,8099171145,15000
+
+// 2.object:
+
+/* student = { 'name': 'lamxi', 'age': 26, 'phone': 8099171458, 'email': 'lamxi145@gmail.com' }
+
+document.writeln(student,typeof(student)) */
+
+/* output:
+{
+    name: 'lamxi',
+    age: 26,
+    phone: 8099171458,
+    email: 'lamxi145@gmail.com'
+  } object */
+
+/* emp = ['shravan', 26, 1051, 8099171145, 15000]
+
+
+document.writeln(typeof emp, '<br>', emp)
+document.writeln(typeof emp, '<br>', emp[0], '<br>', emp[1], '<br>', emp[2], '<br>', emp[3],'<br>',emp[4])
+ */
+/* a = 25
+b = '2'
+mul=a-b
+console.log(mul) */
+
+phone = 9147852369
+exp = 92345678974185296332124454485464984465131568468561320351654684681315646484561321516466551651848n
+console.log(typeof phone, phone)
+console.log(typeof exp, exp)
 
