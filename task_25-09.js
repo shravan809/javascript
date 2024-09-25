@@ -128,17 +128,66 @@ console.log(convert())
 //1.Modulus Operator:
 //Write a program that uses the modulus operator % to check if a number is even or odd.
 
-let num = 1283
+/* let num = 1283
 
 if (num % 2 == 0) {
     console.log('EVEN')
 } else {
     console.log('ODD')
-}
+} */
 
-/*
-2.Nullish Coalescing Operator (??):
-Use the nullish coalescing operator to provide a fallback value for a variable that might be null or undefined.
-3.Find the Largest of Three Numbers Using Ternary Operator:3.
-4.Write a function to find the largest of three numbers using a ternary operator.
-5.Write a function that returns the result of raising a base number to a given power using the exponentiation operator (**). */
+
+//2.Nullish Coalescing Operator (??):
+//Use the nullish coalescing operator to provide a fallback value for a variable that might be null or undefined.
+
+/* let userInput=0
+let defaultInput = 25;
+
+let finalInput = userInput ?? defaultInput;
+
+console.log(finalInput); 
+
+output:
+0*/
+
+
+//3.Find the Largest of Three Numbers Using Ternary Operator:
+
+/* let a = 1
+let b = 8
+let c = 70
+
+let res = (a >= b && a >= c) ? a : (b >= a && b >= c) ? b : c;
+
+console.log(res) 
+output:
+70
+
+*/
+//4.Write a function to find the largest of three numbers using a ternary operator.
+
+/* function display(a, b, c) {
+    let res = (a > b) ? 
+              (a > c ? a : c) : 
+              (b > c ? b : c); 
+    return res
+}
+let a = 10
+let b = 50
+let c = 1
+
+console.log(display(a,b,c))  
+output:
+50
+*/
+//5.Write a function that returns the result of raising a base number to a given power using the exponentiation operator (**).
+/* 
+function exp(a) {
+    return 5 ** a
+    
+}
+a = 2
+console.log(exp(a)) 
+output:
+25
+*/
