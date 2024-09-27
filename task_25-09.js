@@ -55,17 +55,51 @@ console.log(index) */
 // Write a function using a for loop to remove duplicate values from an array
 
 //let arr = [1, 2, 3, 2, 4, 1, 5]
+/* arr = [1, 2, 3, 2, 4, 1, 5]
 
-
-
+arr1=[]
+for (el of arr) {
+    if (!arr1.includes(el)) {
+        arr1.push(el)
+    }
+}
+console.log(arr1) */
 
 //.................................................................................................................................................
 /*Loops:
 1.FizzBuzz Problem:
 Write a for loop that prints numbers from 1 to 100. But for multiples of 3, print "Fizz" instead of the number, and for multiples of 5, print "Buzz".
 For numbers that are multiples of both 3 and 5, print "FizzBuzz".
+*/
+
+/* for (i = 1; i < 101; i++){
+    if (i % (3 * 5) == 0) {
+        console.log('FizzBuzz')
+    }
+    else if (i % 3 == 0) {
+        console.log('Fizz')
+    }
+    else if (i % 5 == 0) {
+        console.log('Buzz')
+    }
+    else {
+        console.log(i)
+    }
+}
+ */
+
+/*
 2.Factorial:
 Write a for loop to find the factorial of a number n. For example, if n = 5, the result should be 5 * 4 * 3 * 2 * 1 = 120.
+*/
+
+n = 5
+fact=1
+for (i = 2; i <= n; i++){
+    fact *= i
+}
+console.log(fact)
+/*
 3.Sum of Multiples:
 Write a for loop that calculates the sum of all multiples of 3 or 5 below 1000.
 4.Count Vowels in a String:
