@@ -93,15 +93,26 @@ For numbers that are multiples of both 3 and 5, print "FizzBuzz".
 Write a for loop to find the factorial of a number n. For example, if n = 5, the result should be 5 * 4 * 3 * 2 * 1 = 120.
 */
 
-n = 5
+/* n = 5
 fact=1
 for (i = 2; i <= n; i++){
     fact *= i
 }
-console.log(fact)
+console.log(fact) */
 /*
 3.Sum of Multiples:
 Write a for loop that calculates the sum of all multiples of 3 or 5 below 1000.
+*/
+/* let sum = 0
+for (let i = 1; i <= 1000; i++){
+    if (i % 3 == 0 || i % 5 == 0){
+        sum += i 
+    }
+}
+console.log(sum) */
+
+
+/*
 4.Count Vowels in a String:
 Write a loop to count the number of vowels (a, e, i, o, u) in a given string.
 Break and Continue:
