@@ -1,6 +1,6 @@
 /* 1.Given two sorted arrays nums1 and nums2 of size m and n respectively, return the
 median of the two sorted arrays.
-Input: arr1[]]={-5, 3, 6, 12, 15}, arr2[] = {-12, -10, -6, -3, 4, 10}
+Input: arr1[]={-5, 3, 6, 12, 15}, arr2[] = {-12, -10, -6, -3, 4, 10}
 Output: The median is 3.
 Explanation: The merged array is arr3[]{-12, -10, -6, -5, -3, 3, 4, 6, 10, 12, 15}. So the median of the merged 
 array is 3.
@@ -103,3 +103,13 @@ for (let i = 0; i < maxlength; i++) {
     arr3.push(value1 + value2)
 }
 console.log(arr3) */
+
+/* 
+//give output as [[1,2],[3,4],[4,5],[5,6],[7,8],[9,10]]
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a = 2
+res = []
+for (i = 0; i < arr.length; i+=a){
+    res.push(arr.slice(i, i + a))   
+}
+console.log(res) */
