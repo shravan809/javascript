@@ -116,12 +116,44 @@ console.log(sum) */
 4.Count Vowels in a String:
 Write a loop to count the number of vowels (a, e, i, o, u) in a given string.
 Break and Continue:
-5.Write a loop that prints numbers from 1 to 10 but skips the number 5 using the continue statement. Stop the loop entirely when the number reaches 8 using
-the break statement.
+*/
+/* 
+st = 'How Are You'
+vowels = 'aeiouAEIOU'
+count=0
+for (i = 0; i < st.length; i++){
+    char = st[i]
+    if (!vowels.includes(char)) {
+        continue
+    }
+    count++
+    if (count >= 10) {
+        break
+    }
+}
+console.log(count) */
+
+/*
+5.Write a loop that prints numbers from 1 to 10 but skips the number 5 using the continue statement. Stop the loop 
+entirely when the number reaches 8 using the break statement.*/
+
+
+/* for (i = 1; i < 11; i++){
+    // console.log(i)
+    if (i == 5) {
+        continue
+    } else if (i == 8) {
+        break
+    }
+    else
+        console.log(i)
+} */
+
+/*
 .................................................................................................................................................
-Data Types:*/
+Data Types:
  
-//1.Write a function that takes a value and returns its data type.
+//1.Write a function that takes a value and returns its data type.*/
 /* 
 function show() {
     let a = 10;
