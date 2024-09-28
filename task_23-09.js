@@ -167,9 +167,9 @@ The value is NaN */
 //1.Write a program that checks if a number is positive, negative, or zero.
 
 
-let number = prompt("Enter a number:");
+/* let number = prompt("Enter a number:");
 
-// Convert input to a number
+
 number = Number(number);
 
 if (number > 0) {
@@ -178,7 +178,7 @@ if (number > 0) {
   console.log("The number is negative.");
 } else {
   console.log("The number is zero.");
-}
+} */
 
 
 /*2.Write a program that assigns a grade (A, B, C, D, F) based on a score using nested if.
