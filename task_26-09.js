@@ -113,3 +113,4 @@ for (i = 0; i < arr.length; i+=a){
     res.push(arr.slice(i, i + a))   
 }
 console.log(res) */
+
