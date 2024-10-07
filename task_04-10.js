@@ -45,11 +45,17 @@ Logical operator:
 ----------------- 
 1.write a code using the logical operators AND (&&) and OR (||) with all possible combinations of true and false values. 
 
-example: */
+example: 
 console.log(true && true) //true
 console.log(true && false)//false
 console.log(false && true)//false
 console.log(false && false)//false
+
+console.log(true || true) //true
+console.log(true || false)//true
+console.log(false || true)//true
+console.log(false || false)//false
+*/
 
 /*
 comparison operator: 
@@ -58,16 +64,66 @@ comparison operator:
 example:  
 let a=2 
 let b=4 
-console.log(a+2>b-2) 
+console.log(a+2>b-2) //true
+console.log(a === b)//false
+console.log(a == b)//false
+console.log(a !== b)//true
+console.log(a != b)//true
+console.log(a <= b)//true
+console.log(a >= b)//false
+console.log(a < b)//true
+console.log(a > b)//false
+*/
 
+/*
 Following are Java Script tasks on loops and conditional statements,if statements 
 
 1.Write a program that checks if a number is positive, negative, or zero. 
 
+n = 0;
+
+if (n > 0) {
+    console.log('Given number is pasitive')
+} else if (n < 0) {
+    console.log('Given number is negative')
+} else {
+    console.log('Given number is zero')
+}
+*/
+/*
 2.Write a program that assigns a grade (A, B, C, D, F) based on a score using nested if. 
 
-3.Develop a program that determines if a number is even or odd and whether it is within a certain range (1 to 100) 
+marks=30
 
+if (marks > 90 && marks <= 100){
+    console.log('Grade A')
+} else if (marks > 75 && marks<90) {
+    console.log('Grade B')
+} else if (marks > 55 && marks<75) {
+    console.log('Grade C')
+} else if (marks > 35 && marks<55) {
+    console.log('Grade D')
+} else {
+    console.log('Grade F')
+}
+*/
+
+/*
+3.Develop a program that determines if a number is even or odd and whether it is within a certain range (1 to 100) 
+n = 99
+
+if (n >= 1 && n <= 100) {
+    if (n % 2 == 0) {
+        console.log('EVEN')
+    } else {
+        console.log('ODD')
+    }
+} else {
+    console.log('Please enter the number b/w 1 to 100')
+}
+*/
+
+/*
 4.Write a program that checks if a person is eligible to vote based on their age and citizenship status using nested if. 
 
 5.Write a program that determines if a character is a vowel or consonant? 
