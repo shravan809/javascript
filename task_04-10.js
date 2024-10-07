@@ -209,6 +209,12 @@ Nested loops:
 --------------- 
 1.Write a program that calculates the sum of all i**j values for i and j ranging from 1 to 3(using exponent). */
 
+for (i = 1; i <= 3; i++){
+    for (j = 1; j <= i; j++){
+        let sum = i ** j;
+        console.log(`sum of ${i}**${j} is: ${sum}`)
+    }
+}
 
 /*
 2.Write a program that counts and prints pairs (i, j) between 1 and 4 where one number is even and the other is odd. 
