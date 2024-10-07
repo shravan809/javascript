@@ -207,29 +207,156 @@ for (i = 1; i <= 2; i++){
 /*
 Nested loops: 
 --------------- 
-1.Write a program that calculates the sum of all i**j values for i and j ranging from 1 to 3(using exponent). */
+1.Write a program that calculates the sum of all i**j values for i and j ranging from 1 to 3(using exponent). 
+let sum = 0;
 
 for (i = 1; i <= 3; i++){
-    for (j = 1; j <= i; j++){
-        let sum = i ** j;
-        console.log(`sum of ${i}**${j} is: ${sum}`)
+    for (j = 1; j <= 3; j++){
+        sum += i ** j;
+        
+    }
+}
+console.log(`sum of all i^j values for i and j from 1 to 3  is: ${sum}`)
+*/
+/*
+2.Write a program that counts and prints pairs (i, j) between 1 and 4 where one number is even and the other is odd. 
+
+let count = 0
+
+for (let i = 1; i <= 4; i++){
+    for (let j = 1; i <= 4; j++){
+        if ((i % 2 === 0 && j % 2 !== 0) || (i % 2 !== 0 && j % 2 == 0)){
+            console.log(`Pair (${i},${j})`)
+            count++
+        }
+    }
+}
+// console.log(count)*/
+
+/*
+3.Write a program that prints all pairs (i, j) between 1 and 5 where the difference between i and j is 2. 
+
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+        if ((j-i) === 2) {
+            console.log(`Pair: (${i}, ${j})`);
+        }
+    }
+}
+*/
+
+
+/*
+4.Write a program where the outer loop runs from 5 to 1, and the inner loop runs from 1 to 3, printing each pair (i, j).
+
+for (let i = 5; i >= 1; i--) {
+    for (let j = 1; j <= 3; j++) {
+        console.log(`Pair: (${i}, ${j})`);
+    }
+}
+*/
+
+/*
+5.Write a program that finds pairs of numbers (i, j) between 1 and 5 where both numbers are prime. 
+
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+        
+        if (isPrime(i) && isPrime(j)) {
+            console.log(`Pair: (${i}, ${j})`);
+        }
+    }
+}
+*/
+
+/*
+6.Write a program that checks and prints when i is equal to or greater than j in nested loop running from 1 to 5 range.
+
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+    
+        if (i >= j) {
+            console.log(`i: ${i}, j: ${j} (i is equal to or greater than j)`);
+        }
+    }
+}
+*/
+/*
+7.Write a program that counts the total number of iterations performed in nested loops where the outer loop runs from 
+1 to 3 and the inner loop runs from 1 to 2. 
+
+let totalIterations = 0;
+
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 2; j++) {
+        totalIterations++; // Increment the counter for each iteration
     }
 }
 
+console.log(`Total number of iterations: ${totalIterations}`);
+*/
+
 /*
-2.Write a program that counts and prints pairs (i, j) between 1 and 4 where one number is even and the other is odd. 
-3.Write a program that prints all pairs (i, j) between 1 and 5 where the difference between i and j is 2. 
-4.Write a program where the outer loop runs from 5 to 1, and the inner loop runs from 1 to 3, printing each pair (i, j). 
-5.Write a program that finds pairs of numbers (i, j) between 1 and 5 where both numbers are prime. 
-
-6.Write a program that checks and prints when i is equal to or greater than j in nested loop running from 1 to 5 range. 
-
-7.Write a program that counts the total number of iterations performed in nested loops where the outer loop runs from 1 to 3 and the inner loop runs from 1 to 2. 
-
 8.Write a program that checks if the sum of pairs (i, j) between 1 and 4 is a prime number. 
 
-9.Write a program that finds pairs (i, j) from 1 to 3 where the sum i + j is greater than the product i * j. 
 
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+for (let i = 1; i <= 4; i++) {
+    for (let j = 1; j <= 4; j++) {
+        let sum = i + j; 
+        
+        if (isPrime(sum)) {
+            console.log(`The sum of pair (${i}, ${j}) = ${sum} is a prime number.`);
+        } else {
+            console.log(`The sum of pair (${i}, ${j}) = ${sum} is not a prime number.`);
+        }
+    }
+}
+*/
+
+
+/*
+9.Write a program that finds pairs (i, j) from 1 to 3 where the sum i + j is greater than the product i * j. 
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 3; j++) {
+        if (i + j > i * j) {
+            console.log(`Pair: (${i}, ${j}) - Sum: ${i + j}, Product: ${i * j}`);
+        }
+    }
+}
+*/
+
+
+/*
 10.Write a program that prints pairs (i, j) from 1 to 3 where the product i * j is even. 
 
-*/
+
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 3; j++) {
+        
+        if ((i * j) % 2 === 0) {
+            console.log(`Pair: (${i}, ${j}) - Product: ${i * j}`);
+        }
+    }
+}
+ */
