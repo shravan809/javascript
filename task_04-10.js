@@ -185,18 +185,32 @@ for (i = 2; i < 100; i++){
 */
 
 /*
-4.Use a for loop to compute the sum of squares of the first 10 positive integers. */
-
-
-
-
+4.Use a for loop to compute the sum of squares of the first 10 positive integers. 
+sum=0
+for (i = 1; i < 10; i++){
+    sum+=i**2
+}
+console.log(sum)
+*/
 
 /*
 5.Write a program that prints the sum of each pair of numbers between 1 and 2 using nested for loop? 
 
+for (i = 1; i <= 2; i++){
+    for (j = 1; j <= 2; j++){
+        let sum = i + j;
+        console.log(`sum of ${i} and ${j} is: ${sum}`)
+    }
+}
+*/
+
+/*
 Nested loops: 
 --------------- 
-1.Write a program that calculates the sum of all i**j values for i and j ranging from 1 to 3(using exponent). 
+1.Write a program that calculates the sum of all i**j values for i and j ranging from 1 to 3(using exponent). */
+
+
+/*
 2.Write a program that counts and prints pairs (i, j) between 1 and 4 where one number is even and the other is odd. 
 3.Write a program that prints all pairs (i, j) between 1 and 5 where the difference between i and j is 2. 
 4.Write a program where the outer loop runs from 5 to 1, and the inner loop runs from 1 to 3, printing each pair (i, j). 
