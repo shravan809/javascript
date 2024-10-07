@@ -126,14 +126,72 @@ if (n >= 1 && n <= 100) {
 /*
 4.Write a program that checks if a person is eligible to vote based on their age and citizenship status using nested if. 
 
+age = 10
+
+if (age >= 18) {
+    console.log('Elgible for vote')
+} else {
+    console.log('not eligible for vote')
+}
+*/
+/*
 5.Write a program that determines if a character is a vowel or consonant? 
 
+str = 'A'
+vowel = 'aeiou'
+str=str.toLowerCase()
+if (vowel.includes(str)){
+    console.log('it is a vowel')
+} else {
+    console.log('it is a consonant')
+}
+*/
+
+/*
 for loop: 
 --------- 
 1.Write a for loop to compute the sum of all integers from 1 to 50. 
+
+sum = 0
+
+for (i = 1; i < 51; i++){
+    sum+=i
+}
+console.log(sum)*/
+
+/*
 2.Write a for loop that prints the first 10 multiples of a given number n? 
+n=10
+for (i = 1; i < 11; i++){
+    console.log(n,'*',i,'=',n*i)
+} 
+*/
+
+/*
 3.Write a for loop to print all prime numbers between 1 and 100. 
-4.Use a for loop to compute the sum of squares of the first 10 positive integers. 
+
+for (i = 2; i < 100; i++){
+    isprime = true
+    for (j = 2; j < i; j++) {
+        if (i % j === 0) {
+            isprime=false
+            break
+        }
+    }
+    if (isprime){
+        console.log(i)
+    }
+}
+*/
+
+/*
+4.Use a for loop to compute the sum of squares of the first 10 positive integers. */
+
+
+
+
+
+/*
 5.Write a program that prints the sum of each pair of numbers between 1 and 2 using nested for loop? 
 
 Nested loops: 
