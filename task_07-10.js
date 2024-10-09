@@ -66,17 +66,22 @@ console.log(output)
 input = [287, 7342, 934757, 66542, 75, 765765]
 output = []
 
-for (i = 0; i < input.length; i++){
+for (i = 0; i < input.length; i++) {
 	s = String(input[i])
-	let even = 0
-	let odd = 0
-	for (j = 0; j < s.length; j++){
-		let digit=parseInt(j[i])
-		if (digit % 2 == 0) {
-			even+=digit
-		}
+	if (s.length > 3) {
+		let first = parseInt(s[0])
+		let last = parseInt(s[s.length - 1])
+		if ((first % 2 === 0 && last % 2 === 0) || (first % 2 !== 0 && last % 2 !== 0)) {
+			output.push(parseInt(s))
+		} else {
+			let mid = s.slice(1, s.length - 1)
+			let res = first + last + mid
+			output.push(parseInt(res))
+		} 
+	} else {
+		output.push(parseInt(s))
 	}
-	output.push(even.toString())
+	
 }
 console.log(output)
  /*
