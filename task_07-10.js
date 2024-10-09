@@ -34,23 +34,52 @@ console.log(typeof vowels)
 /*
 3.Take one array and add first all even numbers and second all odd numbers in a digit.
          Input:[2435,982,5642,1232,87]
-         Output:[68,109,125,44,87]*/
+         Output:[68,109,125,44,87]
 
-input = [2435, 982, 5642, 1232, 87]
+/* input = [2435, 982, 5642, 1232, 87]
 output = []
+
 for (i = 0; i < input.length; i++){
-	console.log(input[i])
+	s=String(input[i])
+	let even = 0
+	let odd = 0
+	for (j = 0; j < s.length; j++){
+		let digit = parseInt(s[j])
+		if (digit % 2 === 0) {
+			even+=digit
+		}else {
+			odd+=digit
+		}
+	}
+	output.push(parseInt(even.toString() + odd.toString()))
+	
 }
+console.log(output)
 
-
-
-
+ */
  /*
 4.Take One Array and do the process as if the number consists more than 3 digits To check the coditions as
 =>First and last digits are both even or odd no need to perform any operation the same number will return otherwise the first and last numbers are one is even and one is odd it will be added and remaining number is append it.
     Input: [287, 7342, 934757,66542,75,765765]
-    Output: [98,97,16811,8105,12,121212]
- 
+    Output: [98,97,16811,8105,12,121212]*/
+
+input = [287, 7342, 934757, 66542, 75, 765765]
+output = []
+
+for (i = 0; i < input.length; i++){
+	s = String(input[i])
+	let even = 0
+	let odd = 0
+	for (j = 0; j < s.length; j++){
+		let digit=parseInt(j[i])
+		if (digit % 2 == 0) {
+			even+=digit
+		}
+	}
+	output.push(even.toString())
+}
+console.log(output)
+ /*
 5.Take One Array Consists of all digits like single digit numbers,double,triple and more in that you have follows some  rules:-
   =>if it is one digit even or odd number we can add 0 in absence place
 =>if it is 2 or more digits we have to count all even and odd numbers.
