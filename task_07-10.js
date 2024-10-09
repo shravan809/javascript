@@ -1,12 +1,51 @@
 /* 1.Count how many times a letter occurring in a string
          input : sri veni pogula 
-         Output : { s : 1, r : 1, i : 2, v : 1,                 e : 1, n : 1, p: 1, o:1, g:0, u:0, l:0, a:0 }
+         Output : { s : 1, r : 1, i : 2, v : 1, e : 1, n : 1, p: 1, o:1, g:1, u:1, l:1, a:1 }
+
+
+str = 'this is javascript'
+obj = {}
+for (i = 0; i < str.length; i++){
+	if (str[i] in obj) {
+		obj[str[i]] += 1
+	} else if(str[i]!==' ') {
+		obj[str[i]] = 1
+	}
+}
+
+console.log(obj)
+
+*/
+
+/*
 2. replace all Vowels(By taking one sample text json file) in object body value (string)  with  #
  
+json = { "name":"shravan","age":26,"city":"Hyd","description":"This a javascript"}
+
+vowels = /[AEIOUaeiou]/g
+for (let key in json){
+	if (typeof json[key] === 'string') {
+		json[key]=json[key].replace(vowels,'#')
+	}
+}
+console.log(typeof vowels)
+*/
+
+/*
 3.Take one array and add first all even numbers and second all odd numbers in a digit.
          Input:[2435,982,5642,1232,87]
-         Output:[68,109,125,44,87]
- 
+         Output:[68,109,125,44,87]*/
+
+input = [2435, 982, 5642, 1232, 87]
+output = []
+for (i = 0; i < input.length; i++){
+	console.log(input[i])
+}
+
+
+
+
+ /*
 4.Take One Array and do the process as if the number consists more than 3 digits To check the coditions as
 =>First and last digits are both even or odd no need to perform any operation the same number will return otherwise the first and last numbers are one is even and one is odd it will be added and remaining number is append it.
     Input: [287, 7342, 934757,66542,75,765765]
