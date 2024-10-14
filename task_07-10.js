@@ -70,14 +70,8 @@ for (i = 0; i < input.length; i++) {
 	let s = String(input[i])
 	let first = parseInt(s[0])
 	let last = parseInt(s[s.length - 1])
-	
-	if (s.length % 2 == 0) {
-		let res = first + last
-		output.push(parseInt(res))
-	} else {
-		output.push(parseInt(input[i]))
-	}
 }
+
 console.log(output)
 
 
@@ -86,13 +80,9 @@ console.log(output)
   =>if it is one digit even or odd number we can add 0 in absence place
 =>if it is 2 or more digits we have to count all even and odd numbers.
    Input:[5,7,8,6,25,18,19,27,33,88,754,484,374,987,8765,7645,8994,6548,932157,48327,9875432]
-  Output:[10,10,01,01,11,11,20,11,20,02,21,03,21,21,22,22,22,13,51,23,43]
+  Output:[10,10,01,01,11,11,20,11,20,02,21,03,21,21,22,22,22,13,51,23,43]*/
  
- 
- 
- 
- 
-
+/*
 6.let a=3;
   let array1 = [0,1,2,3,4,5,6,7,8,9];
   output = [[0,1,2], [3,4,5], [6,7,8], [9]]

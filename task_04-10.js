@@ -165,7 +165,7 @@ n=10
 for (i = 1; i < 11; i++){
     console.log(n,'*',i,'=',n*i)
 } 
-*/
+*/ 
 
 /*
 3.Write a for loop to print all prime numbers between 1 and 100. 
