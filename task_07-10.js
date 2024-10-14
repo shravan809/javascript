@@ -67,19 +67,15 @@ input = [287, 7342, 934757, 66542, 75, 765765]
 output = []
 
 for (i = 0; i < input.length; i++) {
-	s = String(input[i])
-	if (s.length > 3) {
-		let first = parseInt(s[0])
-		let last = parseInt(s[s.length - 1])
-		if ((first % 2 === 0 && last % 2 === 0) || (first % 2 !== 0 && last % 2 !== 0)) {
-			output.push(parseInt(s))
-		} else {
-			let mid = s.slice(1, s.length - 1)
-			let res = first + last + mid
-			output.push(parseInt(res))
-		} 
+	let s = String(input[i])
+	let first = parseInt(s[0])
+	let last = parseInt(s[s.length - 1])
+	
+	if (s.length % 2 == 0) {
+		let res = first + last
+		output.push(parseInt(res))
 	} else {
-		output.push(parseInt(s))
+		output.push(parseInt(input[i]))
 	}
 }
 console.log(output)
