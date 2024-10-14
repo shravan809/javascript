@@ -91,7 +91,25 @@ console.log(result)
 =>if it is 2 or more digits we have to count all even and odd numbers.
    Input:[5,7,8,6,25,18,19,27,33,88,754,484,374,987,8765,7645,8994,6548,932157,48327,9875432]
   Output:[10,10,01,01,11,11,20,11,20,02,21,03,21,21,22,22,22,13,51,23,43]*/
- 
+  let input=[5,7,8,6,25,18,19,27,33,88,754,484,374,987,8765,7645,8994,6548,932157,48327,9875432];
+  let result = []
+  for (let j of input){
+	  j = j.toString();
+	  let l = j.length;
+	  let even = 0
+	  let odd = 0
+	  for (let i = 0 ; i < l; i++) {
+		  if (parseInt(j[i])%2 === 0) {
+			  even += 1
+		  }else {
+			  odd += 1
+		  }
+	  }
+	  let mix = odd.toString()+ even.toString()
+	  result.push(mix)
+  }
+  console.log(result);
+
 /*
 6.let a=3;
   let array1 = [0,1,2,3,4,5,6,7,8,9];
@@ -153,7 +171,7 @@ for (let i = 1; i <= 50; i++) {
 for (let j = 0; j < digitCount.length; j++) {
     console.log(`Count of ${j}'s: ${digitCount[j]}`);
 }
-*/ 
+*/
  
 /*
 9.Taking One Array And follow the rules
@@ -197,3 +215,23 @@ console.log(numIslands([
     ["0","0","0","0","0"]
 ])); 
 //Output: 1 */
+
+let area = [
+	["1","1","1","1","0"],
+	["1","1","0","1","0"],
+	["0","0","1","0","0"],
+	["0","0","0","0","0"]
+	];
+	let count = 0
+	let leng = area.length;
+	for(let i = 0 ; i< leng; i++){
+		let leng1 = area[i].length;
+		for(let j=0 ; j<leng1;j++){
+			if (area[i][j]==='1'){
+				if (area[i+1][j] ==='0' && area[i][j+1] ==='0'&& area[i][j-1]==='0' && area[i-1][j]==='0'){
+					count+= 1
+				}
+			}
+		}
+	}
+	console.log(count)
