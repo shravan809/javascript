@@ -223,7 +223,7 @@ let area = [
 	["0","0","0","0","0"]
 	];
 	let count = 0
-	let leng = area.length;
+	let leng = area.length
 	for(let i = 0 ; i< leng; i++){
 		let leng1 = area[i].length;
 		for(let j=0 ; j<leng1;j++){
