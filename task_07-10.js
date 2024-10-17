@@ -91,24 +91,32 @@ console.log(result)
 =>if it is 2 or more digits we have to count all even and odd numbers.
    Input:[5,7,8,6,25,18,19,27,33,88,754,484,374,987,8765,7645,8994,6548,932157,48327,9875432]
   Output:[10,10,01,01,11,11,20,11,20,02,21,03,21,21,22,22,22,13,51,23,43]*/
-  let input=[5,7,8,6,25,18,19,27,33,88,754,484,374,987,8765,7645,8994,6548,932157,48327,9875432];
-  let result = []
-  for (let j of input){
-	  j = j.toString();
-	  let l = j.length;
-	  let even = 0
-	  let odd = 0
-	  for (let i = 0 ; i < l; i++) {
-		  if (parseInt(j[i])%2 === 0) {
-			  even += 1
-		  }else {
-			  odd += 1
-		  }
-	  }
-	  let mix = odd.toString()+ even.toString()
-	  result.push(mix)
-  }
-  console.log(result);
+
+
+/* let input = [5, 7, 8, 6, 25, 18, 19, 27, 33, 88, 754, 484, 374, 987, 8765, 7645, 8994, 6548, 932157, 48327, 9875432];
+let result = [];
+
+for (let idx = 0; idx < input.length; idx++) {
+let j = input[idx].toString();
+let l = j.length;
+let even = 0;
+let odd = 0;
+
+for (let i = 0; i < l; i++) {
+	if (parseInt(j[i]) % 2 === 0) {
+	even += 1;
+	} else {
+	odd += 1;
+	}
+}
+
+let mix = odd.toString() + even.toString();
+result.push(mix);
+}
+
+console.log(result); */
+  
+
 
 /*
 6.let a=3;
