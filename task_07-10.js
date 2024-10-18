@@ -229,7 +229,7 @@ let area = [
 	["1","1","0","1","0"],
 	["0","0","1","0","0"],
 	["0","0","0","0","0"]
-	];
+	]
 	let count = 0
 	let leng = area.length
 	for(let i = 0 ; i< leng; i++){
