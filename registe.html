@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilgrim Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.3/JsBarcode.all.min.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="image">
+            <img src="https://online.yadadrionline.in/assets/images/LogoSmall.png" 
+            alt="temple" />
+        </div>
+        <div class="headding">
+            <span>శ్రీ లక్ష్మీ నరసింహ స్వామివారి దేవస్థానం</span>
+            <span>యాదగిరిగుట్ట</span>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Pilgrim Registration form</h2>
+
+        <div class="form-container">
+            <form id="pilgrimForm">
+                <div class="input-container">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="Enter piligrim full name" required>
+                </div>
+                <div class="input-container">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" placeholder="Enter piligrim address" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" placeholder="Enter Date of Birth" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" pattern="[0-9]{10}" placeholder="Enter a 10-digit contact number"
+                        required>
+                </div>
+
+                <div class="input-container">
+                    <label for="idProof">Select ID Proof:</label>
+                    <select id="idProof" required>
+                        <option value="" disabled selected>Select ID proof</option>
+                        <option value="Aadhar">Aadhar</option>
+                        <option value="Passport">Passport</option>
+                        <option value="Driving License">Driving License</option>
+                        <option value="Voter ID">Voter ID</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                   <label for="proofNumber">ID Proof Number:</label>
+                    <input type="text" id="proofNumber" placeholder="Enter your ID proof number" required>
+                </div>
+
+                <div class="error" id="errorMessage"></div>
+
+                <div class="register">
+                    <button type="button" onclick="submitForm()">Register</button>
+                </div>
+            </form>
+        </div>
+        <div class="barcode-container" id="barcodeContainer">
+            <svg id="barcode"></svg>
+            <p id="time"></p>      
+
+        </div>
+
+        <!-- <div class="register-another hidden" id="registerAnother">
+            <button onclick="registerAnother()">Register Another Pilgrim</button>
+        </div> -->
+    </div>
+
+    <script src="register.js">
+         
+    </script>
+
+</body>
+
+</html>
