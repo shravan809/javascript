@@ -252,7 +252,7 @@ Check if every number is even after the transformation,
 Return the sum of the transformed numbers if all are even, otherwise return null.
 
 let numbers = [12, -7, 5, 8, -10, 20];
-*/
+
 
 let numbers = [12, -7, 5, 8, -10, 20];
 
@@ -265,3 +265,4 @@ let even = dobble.filter(x => x % 2==0)
 let res = even.reduce((x,y)=>x+y)
 
 console.log(res)
+*/
