@@ -1,0 +1,28 @@
+
+Loops allows us to repeat the block of code multiple times. 
+ With a for loop, you can easily iterate over a list.
+Here’s a quick example looping through some fruits
+A for loop in Python is perfect for iterating through lists or other collections. 
+Here’s a quick example:
+
+# List of fruits
+fruits = ["apple", "banana", "cherry", "grapes", "strawberry"]
+
+# Using a for loop to iterate over each fruit
+for fruit in fruits:
+    print("I love", fruit)
+Explanation:
+
+fruits is a list containing different fruit names.
+for fruit in fruits: This loop will go through each item in the fruits list, assigning it to fruit in each 
+iteration.
+print("I love", fruit): Inside the loop, this line prints a statement for each fruit.
+Output:
+
+I love apple
+I love banana
+I love cherry
+I love grapes
+I love strawberry
+This loop makes it easy to process each item in a collection!
+
