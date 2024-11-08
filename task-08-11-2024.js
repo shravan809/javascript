@@ -618,32 +618,26 @@ for (let key in arr) {
 }
 console.log(arr)
 
-vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']; // Define vowels array
+vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']; 
 
-// Iterate over the array of objects
 for (const item of arr) {
-    // Iterate over the keys in the object using for...in
     for (const key in item) {
-        // Replace vowels in the key
         let newKey = '';
         for (let char of key) {
             newKey += vowels.includes(char) ? '*' : char;
         }
 
-        // Replace vowels in the value if it is a string
         let newValue = '';
         if (typeof item[key] === 'string') {
             for (let char of item[key]) {
                 newValue += vowels.includes(char) ? '*' : char;
             }
         } else {
-            newValue = item[key]; // For non-string values, keep as-is
+            newValue = item[key]; 
         }
 
-        // Set the new key-value pair
         item[newKey] = newValue;
 
-        // Delete the original key if it was modified
         if (newKey !== key) {
             delete item[key];
         }
