@@ -601,25 +601,18 @@ let arr = [
     }
 ]
 vowels = /[AEIOUaeiou]/g
-for (let i of arr) {
-    const item = arr[i];
-    const newItem = {}; // Object to hold keys and values with replaced vowels
-    
-    // Use for...in to iterate over each key in the object
-    for (const key in item) {
-        // Replace vowels in the key
-        const newKey = key.replace(/[aeiouAEIOU]/g, '*');
-        
-        // Replace vowels in the value if it is a string
-        if (typeof item[key] === 'string') {
-            newItem[newKey] = item[key].replace(/[aeiouAEIOU]/g, '*');
+for (let key in arr) {
+    let newarr = arr[key]
+    let newItem = {}
+    for (let item in newarr) {
+        const newKey = item.replace(vowels, '*')
+        if (typeof newarr[item] === 'string') {
+           newItem[newKey] = newarr[item].replace(vowels, '*');
         } else {
-            newItem[newKey] = item[key]; // For non-string values, keep as-is
+            newItem[newKey] = newarr[item]; 
         }
+        
     }
-    
-    // Replace the original item in the array with the modified one
-    arr[i] = newItem;
+    arr[key] = newItem
 }
-
-console.log(arr);
+console.log(arr)
