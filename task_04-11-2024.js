@@ -40,18 +40,18 @@ let input = [287, 7342, 934757,66542,75,765765];
 const result = [];
  
 for (let j of input){
-    let strA = ''
+    let str = ''
     j = j.toString()
     const leng = j.length;
     for (let i = 0 ; i < Math.floor(leng/2) ; i++){
         let A = parseInt(j[i]) + parseInt(j[leng - 1 - i]);
         // console.log(A)
-        strA += A.toString();
+        str += A.toString();
     }
     if (leng % 2 !== 0) {
-        strA += j[Math.floor(leng / 2)]
+        str += j[Math.floor(leng / 2)]
     }
-    result.push(strA)
+    result.push(str)
 }
 console.log(result)*/
 /*
@@ -91,7 +91,7 @@ console.log(result);*/
   let b =5;
   output = [[0,1,2, 3,4],[5, 6,7,8,9]]
 
-  function array1(a) {
+function array1(a) {
 	let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 	res = []
 	for (i = 0; i < arr.length; i+=a){
@@ -109,12 +109,13 @@ console.log(array1(b))*/
 Objective: Given an array of distinct integers and a target number, find all unique combinations of integers that sum up to the target.
 [2, 3, 6, 7]
 // Output: [[7], [2, 2, 3]]*/
+
 const combinationSum = (candidates, target) => {
     const result = [];
     const stack = [[[], 0, target]]; 
     
     while (stack.length > 0) {
-        const [path, start, remaining] = stack.pop();
+        const [path, start, remaining] = stack.pop(); 
 
         if (remaining === 0) {
             result.push(path);
@@ -125,7 +126,7 @@ const combinationSum = (candidates, target) => {
         }
 
         for (let i = start; i < candidates.length; i++) {
-            console.log(stack.push([[...path, candidates[i]], i, remaining - candidates[i]]));
+            stack.push([[...path, candidates[i]], i, remaining - candidates[i]]);
         }
     }
 
@@ -133,7 +134,7 @@ const combinationSum = (candidates, target) => {
 };
 
 const candidates = [2, 3, 6, 7];
-const target = 7;
+const target = 6;
 console.log(combinationSum(candidates, target)); 
 
 // o / p:
