@@ -600,48 +600,25 @@ let arr = [
         "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
     }
 ]
-vowels = 'aeiou'
-console.log(vowels)
-for (let key in arr) {
-    let newarr = arr[key]
-    let newItem = {}
-    for (let item in newarr) {
-        const newKey = item.replace(vowels, '*')
-        if (typeof newarr[item] === 'string') {
-           newItem[newKey] = newarr[item].replace(vowels, '*');
-        } else {
-            newItem[newKey] = newarr[item]; 
+vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']
+
+for (let item of arr) {
+    for (let key in item) {
+        let newkeys = key
+        for (let vowel of vowels) {
+            newkeys = newkeys.replaceAll(vowel,indexof(vowel))
         }
-        
-    }
-    arr[key] = newItem
-}
-console.log(arr)
-
-vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']; 
-
-for (const item of arr) {
-    for (const key in item) {
-        let newKey = '';
-        for (let char of key) {
-            newKey += vowels.includes(char) ? '*' : char;
-        }
-
-        let newValue = '';
-        if (typeof item[key] === 'string') {
-            for (let char of item[key]) {
-                newValue += vowels.includes(char) ? '*' : char;
+        let newvalue = item[key]
+        if (typeof newvalue === 'string') {
+            for (let vowel of vowels) {
+                newvalue = newvalue.replaceAll(vowel, '-')   
             }
-        } else {
-            newValue = item[key]; 
         }
-
-        item[newKey] = newValue;
-
-        if (newKey !== key) {
-            delete item[key];
+        item[newkeys] = newvalue
+        if (newkeys !== key) {
+            delete item[key]
         }
     }
 }
 
-console.log(arr);
+console.log(arr)
