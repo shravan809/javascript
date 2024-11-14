@@ -174,6 +174,6 @@ const res = input.reduce((acc, [key,value]) => {
 }, {})
 console.log(res);
 output:
-{ name: 'Alice', age: 25, job: 'Engineer' }
+{ name: 'Alice', age: 25, job:'Engineer'}
 
 */
