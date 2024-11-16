@@ -156,8 +156,8 @@ console.log(res);
 
 output:
 {
-    A: [ { name: 'Alice', group: 'A' }, { name: 'Charlie', group: 'A' } ],
-    B: [ { name: 'Bob', group: 'B' }, { name: 'David', group: 'B' } ]
+  A: [ { name: 'Alice', group: 'A' }, { name: 'Charlie', group: 'A' } ],
+  B: [ { name: 'Bob', group: 'B' }, { name: 'David', group: 'B' } ]
 }
   */
 /*
