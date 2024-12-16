@@ -1,0 +1,73 @@
+// 1)Write a function that checks if a given number is a prime number.
+
+function isprime(num) {
+    if (num <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true; 
+}
+console.log(isprime(11))
+
+ 
+// 2)Implement a function to find the factorial of a number using recursion.
+ 
+// 3)Write a function that accepts any number of arguments and returns their sum using the rest operator.
+ 
+// 4)flatten a nested array using the Function Recursion.
+// Example: [1, [2, 3], [4, [5, 6]]] → [1, 2, 3, 4, 5, 6]
+ 
+// 5)Implement a curried function to check if a number is within a range (e.g., isInRange(10)(20)(15) should return true).
+ 
+// 6)Write a function that takes a deeply nested object and flattens it, converting its properties into a single level with dot-separated keys.
+// const flattenObject = (obj, parentKey = '', result = {}) => {
+//     // Your implementation
+// };
+ 
+// const obj = { a: 1, b: { c: 2, d: { e: 3 } } };
+// const flattened = flattenObject(obj);
+// // Output: { "a": 1, "b.c": 2, "b.d.e": 3 }
+ 
+// 7)Write a function that separates arguments into arrays based on their type (e.g., strings, numbers, booleans).
+ 
+// const groupByType = (...args) => {
+//     // Your implementation
+// };
+ 
+// // Test case
+// console.log(groupByType(1, "hello", true, 42, "world", false));
+// // Output: { number: [1, 42], string: ["hello", "world"], boolean: [true, false] }
+ 
+ 
+// 8)Write a function that validates an object against a schema. The schema defines the required fields and their types (e.g., string, number, etc.).
+ 
+// const validateObject = (obj, schema) => {
+//     // Your implementation
+// };
+ 
+// // Test case
+// const schema = { name: "string", age: "number", active: "boolean" };
+// const obj = { name: "John", age: 30, active: true };
+// const isValid = validateObject(obj, schema); // Output: true or false
+ 
+// 9)Create a function that groups an array of objects based on a given property.
+ 
+// const groupBy = (array, property) => {
+//     // Your implementation
+// };
+ 
+// // Test case
+// const data = [
+//     { name: "Alice", group: "A" },
+//     { name: "Bob", group: "B" },
+//     { name: "Charlie", group: "A" }
+// ];
+// const grouped = groupBy(data, "group");
+// // Output: {
+// A: [{ name: "Alice", group: "A" }, { name: "Charlie", group: "A" }],
+// B: [{ name: "Bob", group: "B" }]
+// }
