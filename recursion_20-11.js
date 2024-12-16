@@ -107,7 +107,7 @@ const maze = [
 ];
  
 expected:
-[[0, 0], [1, 0], [1, 1], [2, 1], [2, 2]]*/
+[[0, 0], [1, 0], [1, 1], [2, 1], [2, 2]]
 
 
 
@@ -117,28 +117,22 @@ function findPath(maze) {
   const path = [];
 
   function traverse(row, col) {
-    // Check if we are out of bounds or on a blocked cell
     if (row < 0 || col < 0 || row >= rows || col >= cols || maze[row][col] === 0) {
       return false;
     }
 
-    // Add the current cell to the path
     path.push([row, col]);
 
-    // If we have reached the destination, return true
     if (row === rows - 1 && col === cols - 1) {
       return true;
     }
 
-    // Mark the cell as visited to avoid cycles
     maze[row][col] = 0;
 
-    // Explore the four possible directions
     if (traverse(row + 1, col) || traverse(row, col + 1)) {
       return true;
     }
 
-    // Backtrack if no path is found
     path.pop();
     return false;
   }
@@ -146,11 +140,10 @@ function findPath(maze) {
   if (traverse(0, 0)) {
     return path;
   } else {
-    return []; // Return empty if no path is found
+    return []; 
   }
 }
 
-// Example Usage
 const maze = [
   [1, 0, 0],
   [1, 1, 0],
@@ -159,7 +152,7 @@ const maze = [
 
 const result = findPath(maze);
 console.log(result);
-
+*/
 
 
 /*
@@ -169,9 +162,51 @@ Generate all permutations of a given string.
  
 console.log(generatePermutations("abc"));
 expected:["abc", "acb", "bac", "bca", "cab", "cba"]
- 
+
+
+function generatePermutations(str) {
+  const results = [];
+
+  function permute(current, remaining) {
+    if (remaining.length === 0) {
+      results.push(current); 
+      return;
+    }
+
+    for (let i = 0; i < remaining.length; i++) {
+      const newCurrent = current + remaining[i];
+      const newRemaining = remaining.slice(0, i) + remaining.slice(i + 1);
+      permute(newCurrent, newRemaining); 
+    }
+  }
+
+  permute("", str); 
+  return results;
+}
+
+console.log(generatePermutations("abc"));
+
+*/
+
+/* 
 ////////////////////////////////////////////
 5. Calculate Factorials Without Loops
+
+
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1; 
+  }
+  return n * factorial(n - 1); 
+}
+
+
+console.log(factorial(5)); // Output: 120
+console.log(factorial(0)); // Output: 1
+console.log(factorial(1)); // Output: 1
+console.log(factorial(3)); // Output: 6
+
+/*
 ////////////////////////////////
 6. Build a Directory Structure
  
@@ -198,14 +233,24 @@ expected:
   }
 }
  
+
 /////////////////////////////////////////////
 7. Compare Two Nested Structures
 const obj1 = { a: { b: 2 }, c: 3 };
 const obj2 = { a: { b: 2 }, c: 3 };
  
 expected: true
+*/
+const obj1 = { a: { b: 2 }, c: 3 };
+const obj2 = { a: { b: 2 }, c: 3 }; 
  
-///////////////////////////////////
+if (obj1 !== obj2) {
+  console.log('true')
+} else {
+  console.log(false)
+}
+
+/*//////////////////////////////////
 8.Serialize Tree to Array
 const tree = {
   id: 1,
